@@ -1,0 +1,71 @@
+package hw5;
+
+import java.util.Date;
+
+
+public class Test {
+	
+
+	public static void main(String[] args) {
+		RegistrationOffice reo = new RegistrationOffice();
+		// Upcasting
+		Student s1 = new Student(5, "İsmail", 14,new Date(), "Production");
+				s1 = new UnderGraduateStudent(5, "İsmail", 14,new Date(), "Production", "Production");
+	s1.register();
+	reo.getAStudent(s1);
+	reo.registerStudent(s1);
+	
+	Student s2 = new Student(5, "İsmail", 14,new Date(), "Production");
+	        s2 = new GraduateStudent(5, "İsmail", 14,new Date(), "Production", "Production", "sfsdg");
+	        
+    s2.register();
+    reo.getAStudent(s2);
+    reo.registerStudent(s2);
+    System.out.println("*********************** ");
+    
+    Student s3 = new Student(54647, "İsmail", 1998,new Date(), "Maht");
+    s3 = new MasterStudent(5, "İsmail", 14,new Date(), "Math", "Math", "Ahmet");
+    
+    s3.register();
+   reo.getAStudent(s3);
+   reo.registerStudent(s3);
+ 		
+   System.out.println("*********************** ");
+     //downcasting
+     
+		Student student2 = new GraduateStudent(3535, "Ayşe", 1995, new Date(),"Math", "Math","Nesrin");
+		if(student2 instanceof GraduateStudent){
+			System.out.println(student2.name);
+		}
+		else {
+			System.out.println("Student2 is not GraduateStudent! ");
+		}
+		
+	 student2.study();
+	 reo.getAStudent(student2);
+	 reo.registerStudent(student2);
+		 
+	 System.out.println("*********************** ");
+	
+	
+	Student student1 = new MasterStudent(469575, "Pınar", 1994, new Date(),"Maht", "Maht","Burak");
+	if(student1 instanceof MasterStudent){
+		System.out.println(student1.name);
+	}
+	else {
+		System.out.println("Student1 is not MasterStudent! ");
+	}
+	
+ student1.study();
+ reo.getAStudent(student1);
+ reo.registerStudent(student1);
+	 
+ 
+
+	 
+	
+}
+	
+
+
+}
