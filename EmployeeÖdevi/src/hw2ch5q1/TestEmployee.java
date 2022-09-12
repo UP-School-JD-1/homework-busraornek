@@ -30,7 +30,7 @@ public class TestEmployee {
 	}
 	   System.out.println("*****************************************");
 	
-	   Director d1 = new Director( 18750, "Nida", 9 , "Engineer", "Engineer",4.5);
+	   Director d1 = new Director( 18750, "Nida", 9 , "Engineer", "Engineer",470.75);
 	   d1.work();
 	  
 	  
